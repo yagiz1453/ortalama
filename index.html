@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gelişmiş Not Hesaplayıcı</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-calculator"></i> Gelişmiş Not Hesaplayıcı</h1>
+    
+    <div class="summary-cards">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-clock"></i></div>
+        <div class="card-content">
+          <span>Toplam Ders Saati</span>
+          <span id="total-hours-display">0</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <div class="card-content">
+          <span>Genel Ortalama</span>
+          <span id="general-average">-</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="card-content">
+          <span>Toplam Kayıp Puan</span>
+          <span id="total-lost">0</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="table-container">
+      <table id="grade-table">
+        <thead>
+          <tr>
+            <th width="50px"></th>
+            <th width="60px">No</th>
+            <th>Ders Adı</th>
+            <th width="80px">Saat</th>
+            <th width="90px">Not 1</th>
+            <th width="90px">Not 2</th>
+            <th width="90px">Perf 1</th>
+            <th width="90px">Perf 2</th>
+            <th width="90px">Proje</th>
+            <th width="90px">Ortalama</th>
+            <th width="100px">Kayıp Puan</th>
+            <th width="60px"></th>
+          </tr>
+        </thead>
+        <tbody id="course-list"></tbody>
+      </table>
+    </div>
+
+    <div class="controls">
+      <button id="add-course" class="btn btn-add">
+        <i class="fas fa-plus"></i> Yeni Ders Ekle
+      </button>
+      <button id="undo-btn" class="btn btn-undo" disabled>
+        <i class="fas fa-undo"></i> GERİ AL
+      </button>
+      <button id="reset-all" class="btn btn-reset">
+        <i class="fas fa-trash-alt"></i> Tümünü Temizle
+      </button>
+      <button id="save-btn" class="btn btn-save">
+        <i class="fas fa-save"></i> KAYDET
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
